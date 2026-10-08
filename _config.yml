@@ -24,7 +24,7 @@ permalink: pretty
 paginate: 10
 exclude: ["less", "node_modules", "Gruntfile.js", "package.json", "README.md"]
 anchorjs: true
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-sitemap]
 markdown: kramdown
 highlighter: rouge
 kramdown:
@@ -35,12 +35,24 @@ gitalk:
   enable: false
 
 # Configure site-owned analytics only when available.
-ba_track_id: ""
-ga_track_id: ""
+ba_track_id: false
+ga_track_id: false
 ga_domain: auto
 
 featured-tags: true
-featured-condition-size: 1
+featured-condition-size: 0
 chrome-tab-theme-color: "#243746"
 service-worker: false
 friends: []
+
+lang: en
+timezone: Asia/Shanghai
+future: false
+# Template posts are drafts; new editorial posts explicitly opt in.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      published: false
+      author: "Sourcing & Shipping Notes"
