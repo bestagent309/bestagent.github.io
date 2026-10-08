@@ -19,11 +19,7 @@
                     <li>
                         <a href="{{ site.baseurl }}/">Home</a>
                     </li>
-                    {% for page in site.pages %}{% if page.title %}
-                    <li>
-                        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-                    </li>
-                    {% endif %}{% endfor %}
+                    <li><a href="{{ site.agent_guide_path | relative_url }}">Taobao Agents</a></li><li><a href="{{ site.shipping_guide_path | relative_url }}">China Shipping</a></li><li><a href="{{ '/tags/' | relative_url }}">Topics</a></li><li><a href="{{ '/about/' | relative_url }}">About</a></li>
                 </ul>
             </div>
         </div>
