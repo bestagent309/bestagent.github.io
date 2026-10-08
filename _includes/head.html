@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% assign meta_description = page.description | default: page.subtitle | default: site.description %}
-{% capture meta_title %}{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.SEOTitle }}{% endif %}{% endcapture %}
+{% capture meta_title %}{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.SEOTitle }}{% endif %}{% endcapture %}
 {% assign canonical_url = page.url | replace: 'index.html', '' | absolute_url %}
 <title>{{ meta_title | strip | escape }}</title>
 <meta name="description" content="{{ meta_description | escape }}">
@@ -17,12 +17,12 @@
 <meta property="og:image" content="{{ '/img/post-bg-desk.jpg' | absolute_url }}">
 <meta name="twitter:card" content="summary_large_image">
 {% if page.layout == 'post' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
-<link rel="alternate" type="application/atom+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23243746'/%3E%3Ctext x='32' y='42' text-anchor='middle' fill='white' font-family='Arial' font-size='30'%3ESS%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="{{ '/css/bootstrap.min.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/css/hux-blog.min.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/css/syntax.css' | relative_url }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<style>.intro-header .site-heading h1{font-size:64px;line-height:1.12;max-width:900px;margin:0 auto 20px}.intro-header{background-color:#243746}.post-container a{overflow-wrap:anywhere}a:focus-visible{outline:3px solid #0085a1;outline-offset:4px}@media(max-width:767px){.intro-header .site-heading h1{font-size:38px}.intro-header .site-heading{padding:100px 0 70px}}</style>
+<style>.intro-header .site-heading h1{font-size:64px;line-height:1.12;max-width:900px;margin:0 auto 20px}.intro-header{background-color:#243746}.post-container a{overflow-wrap:anywhere}a:focus-visible{outline:3px solid #0085a1;outline-offset:4px}@media(max-width:767px){.intro-header .site-heading h1{font-size:38px}.intro-header .site-heading{padding:100px 0 70px}}.sidebar-container p,.sidebar-container a,.sidebar-container h2{color:#53616b}.sidebar-container .tags a{border-color:#7d8b95}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;color:#53616b}.topic-intro{margin-bottom:40px}.topic-intro>h2{font-size:30px;line-height:1.25}.topic-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0}.topic-card{display:block;padding:24px;background:#f4f7f8;border:1px solid #dbe3e7;border-radius:6px;color:#243746!important}.topic-card:hover{border-color:#0085a1;text-decoration:none!important}.topic-card h3{font-size:21px;margin:10px 0}.topic-card p{font-size:15px;line-height:1.6;margin:10px 0 18px}.topic-card>span:last-child{font-size:14px;font-weight:700}.section-title{font-size:22px;border-top:1px solid #e5e9eb;padding-top:25px}.editorial-note{font-size:14px;color:#53616b;line-height:1.7;padding-top:16px}@media(max-width:767px){.topic-grid{grid-template-columns:1fr}.topic-intro>h2{font-size:26px}.topic-card{padding:20px}.navbar-brand{font-size:16px}}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"{% if page.layout == 'post' %}BlogPosting{% else %}WebPage{% endif %}","name":{{ meta_title | strip | jsonify }},"description":{{ meta_description | jsonify }},"url":{{ canonical_url | jsonify }},"inLanguage":"en","isPartOf":{"@type":"WebSite","name":{{ site.title | jsonify }},"url":{{ '/' | absolute_url | jsonify }}}{% if page.layout == 'post' %},"headline":{{ page.title | jsonify }},"datePublished":{{ page.date | date_to_xmlschema | jsonify }}{% endif %}}</script>
 </head>
