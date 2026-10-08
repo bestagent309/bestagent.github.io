@@ -1,19 +1,19 @@
 # Site identity
 title: "Sourcing & Shipping Notes"
-SEOTitle: "Sourcing & Shipping Notes | China Buying & International Logistics"
+SEOTitle: "Taobao Agent & China Shipping Guides | Sourcing & Shipping Notes"
 author: "Sourcing & Shipping Notes"
 header-img: img/post-bg-desk.jpg
-email: ""
-description: "Practical guides to buying from China: marketplace sourcing, shopping agents, warehouse checks, parcel consolidation, shipping costs, and international delivery."
-keyword: "China sourcing, buying from China, Taobao buying guide, 1688 sourcing, Weidian shopping, shopping agents, warehouse QC, parcel consolidation, international shipping"
+email: false
+description: "Compare Taobao agents and China shipping options by total cost, warehouse QC, consolidation, return terms, and destination-specific quotes."
+keyword: "best taobao agent, cheapest china shipping agent, Taobao agent comparison, China shipping costs, shopping agent fees, parcel consolidation, warehouse QC, 1688 agent, Weidian agent"
 url: "https://bestagent309.github.io"
 baseurl: "/bestagent.github.io"
 github_repo: "https://github.com/bestagent309/bestagent.github.io.git"
 
 # Editorial profile: no unverified personal credentials or affiliations.
 sidebar: true
-sidebar-about-description: "I write about the decisions between finding a product in China and receiving it overseas: seller terms, warehouse photos, packaging, landed costs, and delivery trade-offs."
-sidebar-avatar: ""
+sidebar-about-description: "Practical notes for choosing a Taobao agent and comparing China shipping costs. Start with your destination, inspection needs, and full delivered cost."
+sidebar-avatar: false
 
 # Social links
 RSS: true
@@ -22,7 +22,7 @@ github_username: bestagent309
 # Build settings
 permalink: pretty
 paginate: 10
-exclude: ["less", "node_modules", "Gruntfile.js", "package.json", "README.md"]
+exclude: ["less", "node_modules", "Gruntfile.js", "package.json", "README.md", "offline.html", "sw.js", "pwa", "codecov.yml"]
 anchorjs: true
 plugins: [jekyll-paginate, jekyll-sitemap]
 markdown: kramdown
@@ -43,7 +43,7 @@ featured-tags: true
 featured-condition-size: 0
 chrome-tab-theme-color: "#243746"
 service-worker: false
-friends: []
+friends: false
 
 lang: en
 timezone: Asia/Shanghai
@@ -56,3 +56,7 @@ defaults:
     values:
       published: false
       author: "Sourcing & Shipping Notes"
+# Site-wide topic paths used by navigation and editorial links.
+agent_guide_path: /taobao-agents/
+shipping_guide_path: /china-shipping/
+commercial_context: "This publication supports content marketing for CFANS. See About for editorial and commercial disclosures."
