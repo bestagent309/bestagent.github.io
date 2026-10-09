@@ -16,8 +16,6 @@ tags:
 
 The best Taobao agent for Belgium is the one that can purchase your chosen items, provide the checks you need and offer an eligible shipping route with clearly explained total costs. Compare the same basket, packed dimensions and tax arrangements across agents. A low purchasing fee alone does not establish the cheapest delivered order, and no single agent is the best choice for every buyer.
 
-<small>Commercial disclosure: This publication supports content marketing for CFANS. <a href="{{ "/about/" | relative_url }}">Editorial and commercial context</a>.</small>
-
 ## What does a Taobao agent do?
 
 A Taobao agent is an intermediary that purchases from Taobao sellers on a buyer’s behalf and coordinates the warehouse and international shipment stages. The seller supplies the product; the agent handles the agreed purchasing and parcel services. A shopping agent is not a customs authority, and warehouse inspection does not establish product authenticity.
