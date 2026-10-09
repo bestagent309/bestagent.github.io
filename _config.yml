@@ -59,4 +59,3 @@ defaults:
 # Site-wide topic paths used by navigation and editorial links.
 agent_guide_path: /taobao-agents/
 shipping_guide_path: /china-shipping/
-commercial_context: "This publication supports content marketing for CFANS. See About for editorial and commercial disclosures."
